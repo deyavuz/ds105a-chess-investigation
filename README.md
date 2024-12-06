@@ -5,3 +5,10 @@ Our Names:
 Pritish Raj 
 Defne Ece Yavuz
 Coleman Cochran
+
+
+## Project Ideas
+Here are some topics we're excited to explore:
+- 
+- 
+- 
