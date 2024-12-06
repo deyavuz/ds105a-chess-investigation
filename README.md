@@ -5,3 +5,6 @@ Our Names:
 Pritish Raj 
 Defne Ece Yavuz
 Coleman Cochran
+
+## Team Schedule
+We plan to meet on [days/times]...
