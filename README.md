@@ -8,3 +8,9 @@ Coleman Cochran
 
 ## Team Schedule
 We plan to meet on [days/times]...
+
+## Project Ideas
+Here are some topics we're excited to explore:
+- 
+- 
+- 
