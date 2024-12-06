@@ -5,3 +5,5 @@ Our Names:
 Pritish Raj 
 Defne Ece Yavuz
 Coleman Cochran
+
+We are students passionate about learning about datascience. We want to use it to explore unique data patterns found in several matters we find interesting.
