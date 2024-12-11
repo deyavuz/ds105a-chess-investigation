@@ -4,7 +4,7 @@
 
 ![Chess.com](data/image/chessboard.png)
 
-**AUTHOR:** 
+**Authors:** 
 - Pritish Raj 
 - Defne Ece Yavuz
 - Coleman Cochran 
