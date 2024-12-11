@@ -5,9 +5,9 @@
 ![Chess.com](data/image/chessboard.png)
 
 **AUTHOR:** 
-Pritish Raj 
-Defne Ece Yavuz
-Coleman Cochran 
+- Pritish Raj 
+- Defne Ece Yavuz
+- Coleman Cochran 
 
 
 This project analyzes the performance trends of the top ten chess players using data from Chess.com, Google Trends, and FIDE. It includes **data collection**, **processing**, and **visualization** to answer critical questions about player performance and influence.
