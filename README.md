@@ -48,13 +48,6 @@ This project analyzes the performance trends of the top ten chess players using 
 
 ---
 
-## **Work Distribution Strategy**
-- **Phase 1: Data Collection** – Divide API setup and data retrieval tasks.  
-- **Phase 2: Data Analysis** – Assign statistical tests and trend correlation tasks based on expertise.  
-- **Phase 3: Data Visualization** – Share responsibility for creating visualizations and graphs.
-
----
-
 ## **Risk Mitigation Strategies**
 - **Avoiding API Rate-Limit Errors**:  
   - All team members have API access to distribute load.  
@@ -71,3 +64,11 @@ This project analyzes the performance trends of the top ten chess players using 
 - Study correlations between streaming hours and performance metrics.
 
 ---
+
+## **Work Distribution Strategy**
+- **Phase 1: Data Collection** – Divide API setup and data retrieval tasks.  
+- **Phase 2: Data Analysis** – Assign statistical tests and trend correlation tasks based on expertise.  
+- **Phase 3: Data Visualization** – Share responsibility for creating visualizations and graphs.
+
+
+## **Intended Progression** 
