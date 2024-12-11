@@ -72,3 +72,5 @@ This project analyzes the performance trends of the top ten chess players using 
 
 
 ## **Intended Progression** 
+![Flowchart](../data/image/Flowchart.jpeg)
+
