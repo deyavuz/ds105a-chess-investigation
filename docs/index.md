@@ -27,6 +27,9 @@ This project analyzes the performance trends of the top ten chess players using 
 ---
 
 ## **Technical Implementation Plan**
+
+![Developer Community Home](image/developercommunity.png)
+
 1. **Gain Authentication for APIs**:  
    - Obtain OAuth access for Chess.com and SERPAPI.  
    - Set up FIDE web scraper for historical data extraction.  
