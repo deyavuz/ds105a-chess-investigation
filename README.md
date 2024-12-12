@@ -43,7 +43,7 @@ This project analyzes the performance trends of the top ten chess players using 
 
 4. **Analyze and Visualize Data**:  
    - Compare player performance across game modes.  
-   - Correlate public search interest with player ratings.  
+   - Correlate public search interest with player ratings. 
    - Create graphs and visualizations to present findings.
 
 ---
