@@ -1,6 +1,6 @@
 # In-Chess-tigation - Evaluating Top Chess Player's Performance and Influence
 
-![Chess.com](../data/image/chessboard.png)
+![Chess.com](image/chessboard.png)
 
 **Authors:** 
 - Pritish Raj 
@@ -70,4 +70,4 @@ This project analyzes the performance trends of the top ten chess players using 
 
 
 ## **Intended Progression** 
-![Flowchart](../data/image/Flowchart.png)
+![Flowchart](image/Flowchart.png)
