@@ -78,6 +78,15 @@ This project analyzes the performance trends of the top ten chess players using 
 
 DRAFT (things to include):
 
+Table of Contents
+| No | Section | Content |
+| :--: | :--: | :--: |
+| 1 | [Background Info]() |  |
+| 2 | [RQ and Hypotheses]() |  |
+| 3 | [Data Sources]() |  |
+
+---
+
 <u> Background Information/Key Terms: </u>
 Chess: is this worth defining?
 FIDE: International Chess Federation
@@ -89,16 +98,48 @@ Game Variations:
 Over-the-board:
 Online chess:
 
+---
+
 <u> Research Question: </u>
 
 <u> Hypotheses </u>
 H0: 
 H1:
 
+---
+
+Data Sources:
+- **[Chess.com API](https://www.chess.com/news/view/published-data-api)**: Provides player profiles, game statistics (blitz, rapid, standard ratings), and tournament performances.  
+- **[SERPAPI (Google Trends)](https://serpapi.com/dashboard)**: Supplies keyword popularity time series data, focusing on public interest in chess players and chess-related terms via Google Trends.  
+- **[FIDE Web Scraper](https://github.com/xRuiAlves/fide-ratings-scraper/tree/master#api-documentation)**: Offers historical ELO ratings to track long-term player performance trends.
+
+---
+
 Methodology:
+1)
+2)
+3)
+4)
+5)
 
-Limitations/Considerations:
+---
 
-How we divided the work:
+Order of Notebooks
+| No | Name | Content |
+| :--: | :--: | :--: |
+| 01 | Data Collection |  |
+| 02 | Data Processing |  |
+| 03 | Data Analysis |  |
+| 04 | Data Visualisation |  |
+
+---
+
+Limitations/Considerations/Risk Mitigation:
+
+---
+
+Work Distribution Strategy:
+
+---
 
 Use of AI: (if we want to include our convos with ChatGPT/chatbots)
