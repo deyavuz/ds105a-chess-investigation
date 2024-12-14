@@ -74,3 +74,31 @@ This project analyzes the performance trends of the top ten chess players using 
 ## **Intended Progression** 
 ![Flowchart](data/image/Flowchart.png)
 
+
+
+DRAFT (things to include):
+
+<u> Background Information/Key Terms: </u>
+Chess: is this worth defining?
+FIDE: International Chess Federation
+ELO:
+Game Variations:
+- Standard:
+- Rapid:
+- Blitz:
+Over-the-board:
+Online chess:
+
+<u> Research Question: </u>
+
+<u> Hypotheses </u>
+H0: 
+H1:
+
+Methodology:
+
+Limitations/Considerations:
+
+How we divided the work:
+
+Use of AI: (if we want to include our convos with ChatGPT/chatbots)
