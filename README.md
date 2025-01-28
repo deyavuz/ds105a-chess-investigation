@@ -12,6 +12,13 @@
 
 This project analyzes the performance trends of the top ten chess players using data from Chess.com, Google Trends, and FIDE. It includes **data collection**, **processing**, and **visualization** to answer critical questions about player performance and influence.
 
+Table of Contents
+| No | Section | Content |
+| :--: | :--: | :--: |
+| 1 | [Background Info]() |  |
+| 2 | [RQ and Hypotheses]() |  |
+| 3 | [Data Sources]() |  |
+
 ---
 
 ## **Research Questions**
@@ -78,13 +85,6 @@ This project analyzes the performance trends of the top ten chess players using 
 
 DRAFT (things to include):
 
-Table of Contents
-| No | Section | Content |
-| :--: | :--: | :--: |
-| 1 | [Background Info]() |  |
-| 2 | [RQ and Hypotheses]() |  |
-| 3 | [Data Sources]() |  |
-
 ---
 
 <u> Background Information/Key Terms: </u>
@@ -101,40 +101,57 @@ Online chess:
 ---
 
 <u> Research Question: </u>
-
-<u> Hypotheses </u>
-H0: 
-H1:
+RQ1: Does the FIDE rating progression of the curren top 10 chess players change, depending on the game mode?
+RQ2: 
 
 ---
 
 Data Sources:
-- **[Chess.com API](https://www.chess.com/news/view/published-data-api)**: Provides player profiles, game statistics (blitz, rapid, standard ratings), and tournament performances.  
+- **[Chess.com API](https://www.chess.com/news/view/published-data-api)**: Provides player profiles, game statistics (blitz, rapid, daily ratings), and tournament performances.  
 - **[SERPAPI (Google Trends)](https://serpapi.com/dashboard)**: Supplies keyword popularity time series data, focusing on public interest in chess players and chess-related terms via Google Trends.  
 - **[FIDE Web Scraper](https://github.com/xRuiAlves/fide-ratings-scraper/tree/master#api-documentation)**: Offers historical ELO ratings to track long-term player performance trends.
 
 ---
 
 Methodology:
-1)
-2)
-3)
-4)
-5)
+1) Define a dataframe of the current, active, global top 10 chess players
+2) Configure and use the FIDE Ratings Scraper to collect the classic, rapid, and blitz over-the-board data of the 10 players, convert it into a pandas dataframe
+3) 
+4) 
+5) 
 
 ---
 
 Order of Notebooks
 | No | Name | Content |
 | :--: | :--: | :--: |
-| 01 | Data Collection |  |
-| 02 | Data Processing |  |
+| 01 | [Data Collection]() | Code used to collect FIDE, Chess.com, and Google Trends Data |
+| 02 | Data Processing | Cleaning, imputing, and initial data exploration |
 | 03 | Data Analysis |  |
 | 04 | Data Visualisation |  |
 
 ---
 
-Limitations/Considerations/Risk Mitigation:
+How to recreate the Python environment
+1) Install pyenv through running brew install pyenv (for Mac) or curl https://pyenv.run | bash (for Linux)
+2) Install the required Python version by running pyenv install 3.12.2 and then pyenv local 3.12.2
+3) To create and activate the virtual environment, run python -m venv venv and then source venv/bin/activate (for Mac/Linux) and .\venv\Scripts\activate (for Windows)
+4) Run pip install -r requirements.txt, where requirements.txt is a document containing all the required libraries (e.g., pandas) and the versions to be used
+
+---
+
+How to set up APIs and FIDE Web Scraper
+- Setting up FIDE Web Scraper
+- Getting SerpAPI authentication
+
+---
+
+How to run the code to replicate the results
+To run the code as intended (to replicate the results):
+
+1) Install the required dependencies by running pip install -r requirements.txt
+2) Activate the Python environment, as described above, by running source venv/bin/activate
+3) Run the Notebooks, starting from NB01, then NB02, and finally NB03
 
 ---
 
@@ -142,4 +159,4 @@ Work Distribution Strategy:
 
 ---
 
-Use of AI: (if we want to include our convos with ChatGPT/chatbots)
+🤖 Use of AI: (if we want to include our convos with ChatGPT/chatbots)
