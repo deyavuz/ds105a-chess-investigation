@@ -88,15 +88,15 @@ DRAFT (things to include):
 ---
 
 <u> Background Information/Key Terms: </u>
-Chess: is this worth defining?
-FIDE: International Chess Federation
-Elo: Chess rating system, used by FIDE and most chess websites and organizations
-Game Variations:
-- Standard: 
-- Rapid:
-- Blitz:
-Over-the-board:
-Online chess:
+**Chess:** is this worth defining?
+**FIDE:** International Chess Federation
+**Elo:** Chess rating system, used by FIDE and most chess websites and organizations
+**Game Modes:**
+- **Standard:** 
+- **Rapid:**
+- **Blitz:**
+**Over-the-board:**
+**Online chess:**
 
 ---
 
