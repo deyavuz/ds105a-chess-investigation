@@ -161,28 +161,48 @@ def gtrends_country(country):
     return combined_data
 
 # Chess.com Data
-# Fetching Chess.com data
+# Function to fetch player stats from Chess.com API
+def fetch_chess_com_stats(username):
+    url = f"https://api.chess.com/pub/player/{username}/stats"
+    
+    headers = {
+    "User-Agent": "Python script for educational use"
+}
+    response = requests.get(url, headers=headers)
+
+    if response.status_code == 200:
+        return response.json()
+    elif response.status_code == 403:
+        print(f"Access denied for {username}. API may require authentication.")
+    else:
+        print(f"Failed to fetch data for {username}. Status Code: {response.status_code}")
+    
+    return None
+
+# Function to fetch all players' stats and store in a DataFrame
 def fetch_all_players_stats(players):
     player_stats = []
 
     for player in players:
-        print(f"Fetching data for {player['name']}...")
-        stats = fetch_player_stats(player['chess_com_username'])
-        
+        username = player['chess_com_username'] 
+        print(f"Fetching data for {player['name']} ({username})...")
+
+        stats = fetch_chess_com_stats(username)
+
         if stats:
-            # Extract relevant information from the stats
             player_info = {
                 'name': player['name'],
-                'username': player['chess_com_username'],
+                'fide_number': player['fide_number'],
+                'chess_com_username': username,
+                'country': player['country'],
                 'current_classic': stats.get('chess_daily', {}).get('last', {}).get('rating', None),
                 'current_blitz': stats.get('chess_blitz', {}).get('last', {}).get('rating', None),
                 'current_rapid': stats.get('chess_rapid', {}).get('last', {}).get('rating', None),
             }
             player_stats.append(player_info)
+        else:
+            print(f"Skipping {username}, no data found.")
 
-        time.sleep(1)  # Adding a delay between requests
+        time.sleep(1)
 
-    # Convert the collected data into a DataFrame
-    df = pd.DataFrame(player_stats)
-    return df
-
+    return pd.DataFrame(player_stats)
