@@ -90,9 +90,9 @@ DRAFT (things to include):
 <u> Background Information/Key Terms: </u>
 Chess: is this worth defining?
 FIDE: International Chess Federation
-ELO:
+Elo: Chess rating system, used by FIDE and most chess websites and organizations
 Game Variations:
-- Standard:
+- Standard: 
 - Rapid:
 - Blitz:
 Over-the-board:
@@ -125,10 +125,9 @@ Methodology:
 Order of Notebooks
 | No | Name | Content |
 | :--: | :--: | :--: |
-| 01 | [Data Collection]() | Code used to collect FIDE, Chess.com, and Google Trends Data |
-| 02 | Data Processing | Cleaning, imputing, and initial data exploration |
-| 03 | Data Analysis |  |
-| 04 | Data Visualisation |  |
+| 01 | [Data Collection](./notebooks/NB01-Data-Collection.ipynb) | Code used to collect FIDE, Chess.com, and Google Trends Data |
+| 02 | [Data Processing](./notebooks/NB02-Data-Processing.ipynb) | Cleaning, creating an SQL database, and initial data exploration |
+| 03 | [Data Analysis](./notebooks/NB03-Data-Analysis.ipynb) | Exploratory data analysis and visualisations |
 
 ---
 
