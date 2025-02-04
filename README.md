@@ -12,13 +12,6 @@
 
 This project analyzes the performance trends of the top ten chess players using data from Chess.com, Google Trends, and FIDE. It includes **data collection**, **processing**, and **visualization** to answer critical questions about player performance and influence.
 
-Table of Contents
-| No | Section | Content |
-| :--: | :--: | :--: |
-| 1 | [Background Info]() |  |
-| 2 | [RQ and Hypotheses]() |  |
-| 3 | [Data Sources]() |  |
-
 ---
 
 ## **Research Questions**
@@ -106,13 +99,6 @@ RQ2:
 
 ---
 
-Data Sources:
-- **[Chess.com API](https://www.chess.com/news/view/published-data-api)**: Provides player profiles, game statistics (blitz, rapid, daily ratings), and tournament performances.  
-- **[SERPAPI (Google Trends)](https://serpapi.com/dashboard)**: Supplies keyword popularity time series data, focusing on public interest in chess players and chess-related terms via Google Trends.  
-- **[FIDE Web Scraper](https://github.com/xRuiAlves/fide-ratings-scraper/tree/master#api-documentation)**: Offers historical ELO ratings to track long-term player performance trends.
-
----
-
 Methodology:
 1) Define a dataframe of the current, active, global top 10 chess players
 2) Configure and use the FIDE Ratings Scraper to collect the classic, rapid, and blitz over-the-board data of the 10 players, convert it into a pandas dataframe
@@ -142,6 +128,7 @@ How to recreate the Python environment
 How to set up APIs and FIDE Web Scraper
 - Setting up FIDE Web Scraper
 - Getting SerpAPI authentication
+- Using Chess.com API
 
 ---
 
