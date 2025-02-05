@@ -6,6 +6,10 @@ import pandas as pd
 import numpy as np
 import subprocess
 import time
+import matplotlib.pyplot as plt
+import numpy as np
+import plotly.express as px
+import sqlite3
 
 from serpapi import GoogleSearch
 
