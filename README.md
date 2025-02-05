@@ -41,14 +41,17 @@ This project analyzes the performance trends of the top ten chess players using 
 
 **Elo:** Chess rating system, used by FIDE and most chess websites and organizations
 
-**Game Modes:**
-- **Standard:** 
-- **Rapid:**
-- **Blitz:**
+**Chess Game Modes:** 
 
-**Over-the-board:**
+- **Standard:** A standard FIDE chess game typically lasts around four hours with a time control of 90 minutes for the first 40 moves, followed by 30 minutes for the rest of the game, with an additional 30 seconds added per move; meaning a game can potentially go much longer depending on the complexity of the positions and number of moves played. 
 
-**Online chess:**
+- **Rapid:** A FIDE rapid chess game typically has a time control of 15 minutes per player with a 10-second increment per move; meaning each player gets 15 minutes to play their moves, and they receive an additional 10 seconds added to their clock after each move they make. 
+
+- **Blitz:** A FIDE blitz game is typically played with a time control of 3 minutes per player with a 2-second increment per move; essentially meaning each player has 3 minutes to make their moves, with an additional 2 seconds added to their clock after each move is made. 
+
+**Over-the-board:** A game of chess which is played in person over a physical board.
+
+**Online chess:** A game of chess which is played on line. For instance, on Chess.com 
 
 ---
 
