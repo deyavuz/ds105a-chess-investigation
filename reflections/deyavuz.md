@@ -1,5 +1,9 @@
 Technical Contributions
 
+One technical problem I tackled by myself was dealing with the unnesting of Chess.com and FIDE JSON data. The initial data we gathered was incredibly noisy, confusing, and nested, to an extent that it was unusable without extensive processing and cleaning. I tasked myself with resolving this issue, as it was important to us to have clean, accessible data, alongside a streamlined data collection method. Thus, I adapted our previous code, which saved all of our nested raw JSONs, and instead wrote code which would save those dataframes as objects and converted them into pandas dataframes, from which I then created two single CSV files, one for Chess.com and one for FIDE data. This made our entire data collection and creating an SQL database process easier, cleaner, and more streamlined. 
+
+Additionally, as I like figuring out different methods of playing around with aesthetics and visual displays, I edited and polished most of our work on the README file, to format it in a way that is more legible and cohesive, specifically by creating a linked Table of Contents and Order of Notebooks table.
+
 Team Collaboration
 Our team was on top of things, both in terms of keeping in touch and updating each other, and getting actual work done on our repository. Thus, thankfully, we didn't have to take any conflict resolution steps. I believe we demonstrated a good example for team communication and collaborative, respectful group discussion and work. 
 
