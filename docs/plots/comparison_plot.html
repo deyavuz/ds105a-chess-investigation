@@ -1,0 +1,90 @@
+            <iframe src='about:blank' style='border:none !important;' width='600' height='400' srcdoc="&lt;html lang=&quot;en&quot;>
+   &lt;head>
+       &lt;meta charset=&quot;UTF-8&quot;>
+       &lt;style> html, body { margin: 0; overflow: hidden; } &lt;/style>
+       &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;library&quot; src=&quot;https://cdn.jsdelivr.net/gh/JetBrains/lets-plot@v4.4.1/js-package/distr/lets-plot.min.js&quot;>&lt;/script>
+   &lt;/head>
+   &lt;body>
+          &lt;div id=&quot;xFhog2&quot;>&lt;/div>
+   &lt;script type=&quot;text/javascript&quot; data-lets-plot-script=&quot;plot&quot;>
+       var plotSpec={
+&quot;data&quot;:{
+&quot;name&quot;:[&quot;Alireza Firouzja&quot;,&quot;Erigaisi Arjun&quot;,&quot;Fabiano Caruana&quot;,&quot;Gukesh D&quot;,&quot;Hikaru Nakamura&quot;,&quot;Ian Nepomniachtchi&quot;,&quot;Magnus Carlsen&quot;,&quot;Nodirbek Abdusattorov&quot;,&quot;Viswanathan Anand&quot;,&quot;Yi Wei&quot;,&quot;Alireza Firouzja&quot;,&quot;Erigaisi Arjun&quot;,&quot;Fabiano Caruana&quot;,&quot;Gukesh D&quot;,&quot;Hikaru Nakamura&quot;,&quot;Ian Nepomniachtchi&quot;,&quot;Magnus Carlsen&quot;,&quot;Nodirbek Abdusattorov&quot;,&quot;Viswanathan Anand&quot;,&quot;Yi Wei&quot;,&quot;Alireza Firouzja&quot;,&quot;Erigaisi Arjun&quot;,&quot;Fabiano Caruana&quot;,&quot;Gukesh D&quot;,&quot;Hikaru Nakamura&quot;,&quot;Ian Nepomniachtchi&quot;,&quot;Magnus Carlsen&quot;,&quot;Nodirbek Abdusattorov&quot;,&quot;Viswanathan Anand&quot;,&quot;Yi Wei&quot;],
+&quot;comparison&quot;:[&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-blitz difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;std-rapid difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;,&quot;rapid-blitz difference&quot;],
+&quot;average_difference&quot;:[-8.567375886524824,85.97945205479452,51.06578947368421,265.31451612903226,-103.78947368421052,-46.75657894736842,-36.703947368421055,65.08904109589041,-2.6099290780141846,43.63815789473684,96.46099290780141,188.95762711864407,23.81159420289855,523.3913043478261,-39.7891156462585,-31.592105263157894,-7.434210526315789,144.99346405228758,4.065359477124183,28.152173913043477,-105.02836879432624,-109.57627118644068,26.608695652173914,-310.39516129032256,-67.19047619047619,-15.164473684210526,-29.269736842105264,-86.23972602739725,-8.170212765957446,25.22463768115942]
+},
+&quot;mapping&quot;:{
+},
+&quot;data_meta&quot;:{
+&quot;series_annotations&quot;:[{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;name&quot;
+},{
+&quot;type&quot;:&quot;str&quot;,
+&quot;column&quot;:&quot;comparison&quot;
+},{
+&quot;type&quot;:&quot;float&quot;,
+&quot;column&quot;:&quot;average_difference&quot;
+}]
+},
+&quot;ggtitle&quot;:{
+&quot;text&quot;:&quot;Figure 1. What is the average difference in performance \n between game modes for top 10 chess players?&quot;
+},
+&quot;guides&quot;:{
+&quot;y&quot;:{
+&quot;title&quot;:&quot;Average Difference in Ratings&quot;
+}
+},
+&quot;theme&quot;:{
+&quot;axis_title_x&quot;:{
+&quot;blank&quot;:true
+},
+&quot;axis_text_x&quot;:{
+&quot;size&quot;:11.0,
+&quot;angle&quot;:90.0,
+&quot;hjust&quot;:1.0,
+&quot;blank&quot;:false
+},
+&quot;legend_text&quot;:{
+&quot;size&quot;:11.0,
+&quot;blank&quot;:false
+},
+&quot;legend_title&quot;:{
+&quot;blank&quot;:true
+},
+&quot;legend_position&quot;:&quot;bottom&quot;,
+&quot;plot_title&quot;:{
+&quot;hjust&quot;:0.5,
+&quot;blank&quot;:false
+}
+},
+&quot;kind&quot;:&quot;plot&quot;,
+&quot;scales&quot;:[{
+&quot;aesthetic&quot;:&quot;fill&quot;,
+&quot;values&quot;:[&quot;#6ab6e7&quot;,&quot;#cd5c44&quot;,&quot;#addf1d&quot;]
+}],
+&quot;layers&quot;:[{
+&quot;geom&quot;:&quot;bar&quot;,
+&quot;stat&quot;:&quot;identity&quot;,
+&quot;mapping&quot;:{
+&quot;x&quot;:&quot;name&quot;,
+&quot;y&quot;:&quot;average_difference&quot;,
+&quot;fill&quot;:&quot;comparison&quot;,
+&quot;group&quot;:&quot;comparison&quot;
+},
+&quot;position&quot;:&quot;dodge&quot;,
+&quot;data_meta&quot;:{
+},
+&quot;width&quot;:0.7,
+&quot;color&quot;:&quot;black&quot;,
+&quot;size&quot;:0.3,
+&quot;data&quot;:{
+}
+}],
+&quot;metainfo_list&quot;:[]
+};
+       var plotContainer = document.getElementById(&quot;xFhog2&quot;);
+       LetsPlot.buildPlotFromProcessedSpecs(plotSpec, -1, -1, plotContainer);
+   &lt;/script>
+   &lt;/body>
+&lt;/html>"></iframe>    
