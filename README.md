@@ -154,9 +154,9 @@ Our main goal with this research was to see how chess players' performances chan
 ---
 
 ### How to set up APIs and FIDE Web Scraper
-- Setting up FIDE Web Scraper
-- Getting SerpAPI authentication
-- Using Chess.com API
+- Setting up FIDE Web Scraper (https://github.com/xRuiAlves/fide-ratings-scraper) 
+- Getting SerpAPI authentication (https://serpapi.com/)
+- Using Chess.com API (https://www.chess.com/news/view/published-data-api)
 
 ---
 
