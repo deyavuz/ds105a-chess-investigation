@@ -1,34 +1,85 @@
 [![Review Assignment Due Date](https://classroom.github.com/assets/deadline-readme-button-22041afd0340ce965d47ae6ef1cefeee28c7c493a6346c4f15d667ab976d596c.svg)](https://classroom.github.com/a/_SwzfpU1)
 
-# In-Chess-tigation - Evaluating Top Chess Player's Performance and Influence
+# In-Chess-tigation - Evaluating Top Chess Players' Performance and Influence
 
-![Chess.com](data/image/chessboard.png)
+![Chess.com](docs/image/chessboard.png)
 
 **Authors:** 
 - Pritish Raj 
 - Defne Ece Yavuz
 - Coleman Cochran 
 
-
 This project analyzes the performance trends of the top ten chess players using data from Chess.com, Google Trends, and FIDE. It includes **data collection**, **processing**, and **visualization** to answer critical questions about player performance and influence.
 
 ---
+## README Table of Contents
+| No | Heading |
+| :--: | :--: |
+| [Section 1: Introduction](#section-1-introduction) |
+| 1 | [Key Terms](#key-terms) |
+| 2 | [Research Questions](#research-questions) |
+| 3 | [Order of Notebooks](#order-of-notebooks) |
+| 4 | [Justification of Data Sources](#justification-of-data-sources) |
+| [Section 2: Pre-Research](#section-2-pre-research) |  |
+| 5 | [Technical Implementation Plan](#technical-implementation-plan) |
+| 6 | [Risk Mitigation Strategies](#risk-mitigation-strategies) |
+| 7 | [Work Distribution Strategy](#work-distribution-strategy) |
+| 8 | [Intended Workflow Flowchart](#intended-progression) |
+| [Section 3: Post-Research and Replication](#section-3-post-research-and-replication) |  |
+| 9 | [Methodology](#methodology) |
+| 10 | [Future Extensions](#future-extensions) |
+| 11 | [Recreating the virtual environment, replicating the code and results](#recreating-the-environment-running-the-code-and-replicating-the-results) |
+| 12 | [Use of AI](#-use-of-ai) |
 
-## **Research Questions**
+---
+# Section 1: Introduction
+
+## Key Terms:
+**Chess:** Game
+
+**FIDE:** International Chess Federation
+
+**Elo:** Chess rating system, used by FIDE and most chess websites and organizations
+
+**Game Modes:**
+- **Standard:** 
+- **Rapid:**
+- **Blitz:**
+
+**Over-the-board:**
+
+**Online chess:**
+
+---
+
+## Research Questions
 - **Question 1:** How do the top ten chess players vary in performance across different game modes?
+
 - **Question 2:** Does player performance online align with their FIDE rating?
+
 - **Question 3:** How does their success correlate with chess interest in their home country? Are certain players more influential than others?
 
 ---
 
-## **Justification of Data Sources**
+## Order of Notebooks
+| No | Name | Content |
+| :--: | :--: | :--: |
+| 01 | [Data Collection](./notebooks/NB01-Data-Collection.ipynb) | Code used to collect FIDE, Chess.com, and Google Trends Data |
+| 02 | [Data Processing](./notebooks/NB02-Data-Processing.ipynb) | Cleaning, creating an SQL database, and initial data exploration |
+| 03 | [Data Analysis](./notebooks/NB03-Data-Analysis.ipynb) | Exploratory data analysis and visualisations |
+
+---
+
+## Justification of Data Sources
 - **[Chess.com API](https://www.chess.com/news/view/published-data-api)**: Provides player profiles, game statistics (blitz, rapid, standard ratings), and tournament performances.  
 - **[SERPAPI (Google Trends)](https://serpapi.com/dashboard)**: Supplies keyword popularity time series data, focusing on public interest in chess players and chess-related terms via Google Trends.  
 - **[FIDE Web Scraper](https://github.com/xRuiAlves/fide-ratings-scraper/tree/master#api-documentation)**: Offers historical ELO ratings to track long-term player performance trends.
 
 ---
 
-## **Technical Implementation Plan**
+# Section 2: Pre-Research
+
+## Technical Implementation Plan
 1. **Gain Authentication for APIs**:  
    - Obtain OAuth access for Chess.com and SERPAPI.  
    - Set up FIDE web scraper for historical data extraction.  
@@ -48,7 +99,7 @@ This project analyzes the performance trends of the top ten chess players using 
 
 ---
 
-## **Risk Mitigation Strategies**
+## Risk Mitigation Strategies
 - **Avoiding API Rate-Limit Errors**:  
   - All team members have API access to distribute load.  
   - Implement request throttling to prevent 429 errors.  
@@ -59,38 +110,21 @@ This project analyzes the performance trends of the top ten chess players using 
 
 ---
 
-## **Future Extensions**
-- Investigate the impact of Twitch streaming (e.g., Magnus Carlsen, Hikaru Nakamura) on player ratings using the Twitch API.  
-- Study correlations between streaming hours and performance metrics.
-
----
-
-## **Work Distribution Strategy**
+## Work Distribution Strategy
 - **Phase 1: Data Collection** – Divide API setup and data retrieval tasks.
-   - Pritish: Google Trends and FIDE
-   - Defne: Chess.com and FIDE
-   - Coleman: Google Trends and FIDE
+   - <u> Pritish:</u>  Google Trends and FIDE
+   - <u> Defne:</u>  Chess.com and FIDE
+   - <u> Coleman:</u>  Google Trends and FIDE
 - **Phase 2: Data Analysis** – Assign statistical tests and trend correlation tasks based on expertise.  
 - **Phase 3: Data Visualization** – Share responsibility for creating visualizations and graphs.
 
-
-## **Intended Progression** 
-![Flowchart](data/image/Flowchart.png)
-
-<u> Background Information/Key Terms: </u>
-**Chess:** is this worth defining?
-**FIDE:** International Chess Federation
-**Elo:** Chess rating system, used by FIDE and most chess websites and organizations
-**Game Modes:**
-- **Standard:** 
-- **Rapid:**
-- **Blitz:**
-**Over-the-board:**
-**Online chess:**
+## Intended Progression
+![Flowchart](docs/image/Flowchart.png)
 
 ---
+# Section 3: Post-Research and Replication
 
-Methodology:
+## Methodology:
 1) Define a dataframe of the current, active, global top 10 chess players
 2) Configure and use the FIDE Ratings Scraper to collect the classic, rapid, and blitz over-the-board data of the 10 players, convert it into a pandas dataframe and save as a CSV
 3) Obtain current Chess.com ratings of the players through the public Chess.com API, convert it into a pandas dataframe and save as a CSV
@@ -100,16 +134,16 @@ Methodology:
 
 ---
 
-Order of Notebooks
-| No | Name | Content |
-| :--: | :--: | :--: |
-| 01 | [Data Collection](./notebooks/NB01-Data-Collection.ipynb) | Code used to collect FIDE, Chess.com, and Google Trends Data |
-| 02 | [Data Processing](./notebooks/NB02-Data-Processing.ipynb) | Cleaning, creating an SQL database, and initial data exploration |
-| 03 | [Data Analysis](./notebooks/NB03-Data-Analysis.ipynb) | Exploratory data analysis and visualisations |
+## Future Extensions
+- Investigate the impact of Twitch streaming (e.g., Magnus Carlsen, Hikaru Nakamura) on player ratings using the Twitch API.  
+- Study correlations between streaming hours and performance metrics.
 
 ---
 
-How to recreate the Python environment
+## Recreating the environment, running the code and replicating the results
+
+
+### How to recreate the Python environment
 1) Install pyenv through running brew install pyenv (for Mac) or curl https://pyenv.run | bash (for Linux)
 2) Install the required Python version by running pyenv install 3.12.2 and then pyenv local 3.12.2
 3) To create and activate the virtual environment, run python -m venv venv and then source venv/bin/activate (for Mac/Linux) and .\venv\Scripts\activate (for Windows)
@@ -117,14 +151,14 @@ How to recreate the Python environment
 
 ---
 
-How to set up APIs and FIDE Web Scraper
+### How to set up APIs and FIDE Web Scraper
 - Setting up FIDE Web Scraper
 - Getting SerpAPI authentication
 - Using Chess.com API
 
 ---
 
-How to run the code to replicate the results
+### How to run the code to replicate the results
 To run the code as intended (to replicate the results):
 
 1) Install the required dependencies by running pip install -r requirements.txt
@@ -133,8 +167,5 @@ To run the code as intended (to replicate the results):
 
 ---
 
-Work Distribution Strategy:
-
----
-
-🤖 Use of AI: (if we want to include our convos with ChatGPT/chatbots)
+### 🤖 Use of AI:
+We used the AI chatbot ChatGPT to work through some errors and problems in our code, additionally using it to generate AI images.
