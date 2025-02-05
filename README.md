@@ -69,6 +69,8 @@ Our main goal with this research was to see how chess players' performances chan
 | 01 | [Data Collection](./notebooks/NB01-Data-Collection.ipynb) | Code used to collect FIDE, Chess.com, and Google Trends Data |
 | 02 | [Data Processing](./notebooks/NB02-Data-Processing.ipynb) | Cleaning, creating an SQL database, and initial data exploration |
 | 03 | [Data Analysis](./notebooks/NB03-Data-Analysis.ipynb) | Exploratory data analysis and visualisations |
+| 04 | [Data Visualization](./notebooks/NB04-Data-Visualization_1.ipynb) |  |
+| 05 | [Data Visualization 2](./notebooks/NB05-Data-Visualization_2.ipynb)| |
 
 ---
 
