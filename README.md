@@ -146,6 +146,7 @@ Our main goal with this research was to see how chess players' performances chan
 
 
 ### How to recreate the Python environment
+
 1) Install pyenv through running 
 
 <pre> brew install pyenv </pre> (for Mac) or 
@@ -177,7 +178,10 @@ and then
 where requirements.txt is a document containing all the required libraries (e.g., pandas) and the versions to be used
 
 5) Install NodeJS: Past the following into your terminal
-<pre> ```sh curl -fsSL https://fnm.vercel.app/install | bash exec $SHELL fnm install --lts ``` </pre>
+<pre>curl -fsSL https://fnm.vercel.app/install | bash
+exec $SHELL
+fnm install --lts
+</pre>
 
 6) Download the FIDE Scraper: Run the following code in your terminal 
 <pre> npm install -g fide-ratings-scraper </pre>
