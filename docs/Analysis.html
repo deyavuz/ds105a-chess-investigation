@@ -105,7 +105,7 @@
     </div>
     <div class="row mt-4">
       <div class="col-md-10 mx-auto">
-        <h4 class="mb-3">Competitive Success vs. Public Attention in Chess</h4>
+        <h4 class="mb-3">Has chess rating reached its peak?</h4>
         <p>
           Alireza Firouzja's FIDE rating progression from 2014 to 2025 showcases a pattern that appears consistently across many top chess players' careers, though his rise is particularly dramatic. Starting from around 1800 in 2014, his ratings across all three formats (standard, rapid, and blitz) show a remarkably steep ascent until reaching approximately 2800, where they begin to plateau around 2022.
         </p>
@@ -129,18 +129,52 @@
     </div>
     <div class="row mt-4">
       <div class="col-md-10 mx-auto">
-        <h4 class="mb-3">Competitive Success vs. Public Attention in Chess</h4>
+        <h4 class="mb-3">Is performance vastly different in gamemodes?</h4>
         <p>
-          Alireza Firouzja's FIDE rating progression from 2014 to 2025 showcases a pattern that appears consistently across many top chess players' careers, though his rise is particularly dramatic. Starting from around 1800 in 2014, his ratings across all three formats (standard, rapid, and blitz) show a remarkably steep ascent until reaching approximately 2800, where they begin to plateau around 2022.
+          The above plot visualizes the performance comparisons between each game mode, for all the top 10 chess players. In general, a positive score indicates better performance in the first game mode listed, and a negative score indicates better performance in the second (e.g., Alireza Firouzja's std-blitz difference is -8.57, indicating better performance in blitz; Erigaisi Arjun's score is 86 for the same condition, indicating stronger standard performance).
         </p>
         <p>
-          This plateau effect near 2800 is particularly interesting because it's a phenomenon seen across many top players' rating graphs. Even with different starting points and rates of progression, there seems to be a natural "ceiling" where progress becomes incrementally smaller. This could be interpreted as approaching the theoretical limits of human chess performance, or perhaps reflecting the increasing difficulty of gaining rating points at higher levels due to the mathematical nature of the Elo rating system.
+          Looking at Fig. 1, it is clear that Gukesh has the most noticeable difference between his game mode performances, as his standard game performance trumps all others, followed closely by his blitz game performance. Although not as drastic, Arjun and Abdusattorov's performance differences also follow the same pattern, with them proving more successful at standard games, then blitz, and least successful in rapid.
         </p>
         <p>
-          What sets Firouzja's graph apart is the compressed timeframe of his ascent - achieving in roughly 8 years what traditionally took players 15-20 years. His blitz rating (green line) consistently leads the other formats during his rise, which might suggest that younger players are particularly adept at faster time controls, possibly due to growing up in an era where online blitz chess is commonplace. However, by the plateau phase, all three ratings converge around similar levels, indicating mastery across all time controls.
+          Although players' performance patterns differ, there is a clear trend of poorer rapid game performance compared to the other two game modes.
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="container my-5 p-5 bg-light shadow rounded">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center ratio ratio-4x3">
+        <iframe src="./plots/Bargraph.html"></iframe>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-10 mx-auto">
+        <h4 class="mb-3">Does performance very Online vs Over the board?</h4>
+        <p>
+          As we were also curious about online vs. over-the-board game performance, this got us thinking about whether stress (whether that be a result of in-person games or time conditions) could be one of the primary reasons behind performance. To explore this idea more, we plotted the following graph, comparing players' over-the-board rapid game scores to their Chess.com rapid scores. Due to the unavailability of Chess.com datetime data, we were only able to investigate one point in time, which is now (i.e., February 2025).
         </p>
         <p>
-          The universal pattern of rapid rise followed by plateau that we see across top players' graphs raises interesting questions about chess development. It suggests that while modern training methods and resources might accelerate the journey to elite level, they haven't necessarily raised the ceiling of peak human performance in chess. This pattern might represent a fundamental limit in human chess capability, regardless of the speed of initial development.
+          One thing we noticed was that many players did not play any "daily" mode games, most of them never having played it (signified by the null values in the database) or having uncharacteristically low ratings. This is especially interesting, as over-the-board FIDE data showed that most players performed better at game modes with less of a time constraint. However, when playing online for leisure, they specifically played shorter game modes. This, to us, suggests that time might not be the sole determinant of performance - as players seek out and are successful in these game modes online, it could be that the stress of playing an in-person game (e.g., playing in a foreign environment, being face-to-face with their opponent, tournament streaming, etc.), combined with the time constraint, is affecting their performance. Further research could compare online vs. over-the-board tournament data to provide additional insight into this.
+        </p>
+
+      </div>
+    </div>
+  </div>
+  <div class="container my-5 p-5 bg-light shadow rounded">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center ratio ratio-4x3">
+        <iframe src="./plots/Blitz_Rapid_standard.html"></iframe>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-10 mx-auto">
+        <h4 class="mb-3">Further look into player performance trend</h4>
+        <p>
+          To further observe the general trends in player performance per game mode, we plotted Figure 2, which showcases the average player performance per year. Looking at it, it is clear that as we suggested previously, players almost always had highest Elo's in the standard game mode, followed (and sometimes surpassed by) blitz, and then by rapid. Although fluctuating before 2015, the average ratings seem to gradually increase over time, until plateuing around late 2022/early 2023.
+        </p>
+        <p>
+          The difference in game mode performance could signify a general trend of favouring and/or performing better under less time pressure and stress.
         </p>
       </div>
     </div>
