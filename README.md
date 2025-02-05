@@ -130,7 +130,7 @@ Our main goal with this research was to see how chess players' performances chan
 1) Define a dataframe of the current, active, global top 10 chess players
 2) Configure and use the FIDE Ratings Scraper to collect the classic, rapid, and blitz over-the-board data of the 10 players, convert it into a pandas dataframe and save as a CSV
 3) Obtain current Chess.com ratings of the players through the public Chess.com API, convert it into a pandas dataframe and save as a CSV
-4) Obtain Google Trends data for the search words "chess" and "[player name]" in players' federation countries (e.g., Magnus Carlsen plays for the Norwegian Chess federation, so his trend data will be collectd from Norway) using SerpAPI
+4) Obtain Google Trends data for the search words "chess" and "[player name]" in players' federation countries (e.g., Magnus Carlsen plays for the Norwegian Chess federation, so his trend data will be collectd from Norway) using SERPAPI
 5) Process and combine the data into an SQL database
 6) Perform exploratory analysis and visualize the results through appropriate plots
 
@@ -150,12 +150,26 @@ Our main goal with this research was to see how chess players' performances chan
 2) Install the required Python version by running pyenv install 3.12.2 and then pyenv local 3.12.2
 3) To create and activate the virtual environment, run python -m venv venv and then source venv/bin/activate (for Mac/Linux) and .\venv\Scripts\activate (for Windows)
 4) Run pip install -r requirements.txt, where requirements.txt is a document containing all the required libraries (e.g., pandas) and the versions to be used
+5) Install NodeJS: Past the following into your terminal
+<pre> ```sh curl -fsSL https://fnm.vercel.app/install | bash exec $SHELL fnm install --lts ``` </pre>
+
+6) Download the FIDE Scraper: Run the following code in your terminal 
+<pre> npm install -g fide-ratings-scraper </pre>
+
+If that doesn’t work run the following command:
+
+<pre> conda activate <your_environment_name> npm i -g fide-ratings-scraper </pre>
+
+7) Set up SERPAPI account: This will require setting up an account and creating an API key (see links below)
+
+
+
 
 ---
 
-### How to set up APIs and FIDE Web Scraper
+### Extra Information regarding the APIs
 - Setting up FIDE Web Scraper (https://github.com/xRuiAlves/fide-ratings-scraper) 
-- Getting SerpAPI authentication (https://serpapi.com/)
+- Getting SERPAPI authentication (https://serpapi.com/)
 - Using Chess.com API (https://www.chess.com/news/view/published-data-api)
 
 ---
