@@ -146,10 +146,36 @@ Our main goal with this research was to see how chess players' performances chan
 
 
 ### How to recreate the Python environment
-1) Install pyenv through running brew install pyenv (for Mac) or curl https://pyenv.run | bash (for Linux)
-2) Install the required Python version by running pyenv install 3.12.2 and then pyenv local 3.12.2
-3) To create and activate the virtual environment, run python -m venv venv and then source venv/bin/activate (for Mac/Linux) and .\venv\Scripts\activate (for Windows)
-4) Run pip install -r requirements.txt, where requirements.txt is a document containing all the required libraries (e.g., pandas) and the versions to be used
+1) Install pyenv through running 
+
+<pre> brew install pyenv </pre> (for Mac) or 
+
+<pre> curl https://pyenv.run </pre>| bash (for Linux)
+
+2) Install the required Python version by running 
+
+<pre> pyenv install 3.12.2 </pre> 
+
+and then 
+
+<pre> pyenv local 3.12.2 </pre>
+
+3) To create and activate the virtual environment, run 
+
+<pre> python -m venv venv </pre> 
+
+and then 
+
+<pre> source venv/bin/activate </pre> for Mac/Linux and 
+
+<pre>.\venv\Scripts\activate </pre> for Windows
+
+4) Instal requirements.txt. Run the following: 
+
+<pre> pip install -r requirements.txt </pre>
+
+where requirements.txt is a document containing all the required libraries (e.g., pandas) and the versions to be used
+
 5) Install NodeJS: Past the following into your terminal
 <pre> ```sh curl -fsSL https://fnm.vercel.app/install | bash exec $SHELL fnm install --lts ``` </pre>
 
