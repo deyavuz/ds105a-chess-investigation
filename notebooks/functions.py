@@ -202,3 +202,74 @@ def fetch_all_players_stats(players):
         time.sleep(1)
 
     return pd.DataFrame(player_stats)
+
+# NB04 - Data Visualization
+def create_line_graph_popularity(name, country, date, player_search, country_search):
+    data = pd.DataFrame({
+        'Date': pd.to_datetime(date),
+        f"{name}'s search": player_search,
+        f"{country}'s search": country_search
+    })
+    data_melted = data.melt(id_vars=['Date'], var_name='Search Type', value_name='Search Volume')
+
+    correlation = np.corrcoef(player_search, country_search)[0, 1] # Calculate correlation
+
+    fig = px.line(
+        data_melted, x='Date', y='Search Volume', color='Search Type',
+        title=f"{name}'s Popularity Graph",
+        labels={'Search Volume': 'Search Volume', 'Date': 'Date'},
+        template="plotly_white" 
+    )
+
+    fig.add_annotation(
+        x=data['Date'].iloc[len(data) // 3], 
+        y=max(player_search) * 0.9,
+        text=f"Correlation: {correlation:.2f}",
+        showarrow=False,
+        font=dict(size=14, color="blue"),
+        bgcolor="white"
+    )
+    if name == "Magnus Carlsen":
+        win_dates = ["2013-11-01","2014-11-01","2016-11-01","2018-11-01","2021-12-01"]
+        win_label = ["1st WC","2nd WC","3rd WC","4th WC","5th WC"]
+        for x in range(len(win_dates)):
+            if x == 0:
+                height = 100
+            else:
+                height = 50
+            fig.add_annotation(
+                    x= str(win_dates[x]),
+                    y=height,
+                    text=win_label[x],
+                    showarrow=True,
+                    arrowhead=2,
+                    ax=0, ay=-40, 
+                    textangle = -45,
+                )
+            fig.add_annotation(
+                x = "2023-01-01",
+                y = 40,
+                text="Doesn't defend",
+                showarrow=True,
+                arrowhead=2,
+                ax=30, ay=-40,  
+            )
+        fig.write_html("../docs/plots/magnus_gtrends_plot.html", full_html=False) # saving wanted plot as html file for website usasge
+    fig.show()
+
+def player_info_returner(name,country_code):
+    conn = sqlite3.connect("../data/chess.db")
+    cursor = conn.cursor()
+
+
+    country = cursor.execute(f"SELECT date, search_rate FROM country_gtrends WHERE country = '{country_code}'").fetchall()
+    player = cursor.execute(f"SELECT date, search_rate FROM players_gtrends WHERE name='{name}'").fetchall()
+
+    dates = [date[0] for date in country]
+    dates = pd.to_datetime(dates, format="%b %Y")
+    country_search=[rate[1] for rate in country]
+    player_search=[rate[1] for rate in player[:-1]]
+
+    conn.close()
+    return dates,country_search,player_search
+
