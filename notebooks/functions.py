@@ -277,3 +277,143 @@ def player_info_returner(name,country_code):
     conn.close()
     return dates,country_search,player_search
 
+# NB05 - Data Visualization Pt. 2
+
+def create_line_graph_popularity(name, date, player_search, fide_rating):
+    player_search = (player_search - np.min(player_search)) / (np.max(player_search) - np.min(player_search))
+    fide_rating = (fide_rating - np.min(fide_rating)) / (np.max(fide_rating) - np.min(fide_rating))
+    
+    data = pd.DataFrame({
+        'Date': pd.to_datetime(date),
+        f"{name}'s search volume (normalized)": player_search,
+        f"{name}'s FIDE rating (normalized)": fide_rating
+    })
+
+    data_melted = data.melt(id_vars=['Date'], var_name='Metric', value_name='Value')
+
+    fig = px.line(
+        data_melted, x='Date', y='Value', color='Metric',
+        title=f"{name}'s Popularity vs. FIDE Rating (Normalized)",
+        labels={'Value': 'Normalized Value', 'Date': 'Date'},
+        template="plotly_white"
+    )
+    if name == "Yi Wei":
+        fig.write_html("../docs/plots/Yi_Wei_Pop_to_Fide_plot.html", full_html=False)
+    fig.show()
+
+def player_info_returner(name):
+    conn = sqlite3.connect("../data/chess.db")
+    cursor = conn.cursor()
+
+    player = cursor.execute(
+        f"SELECT date, search_rate FROM players_gtrends WHERE name='{name}'"
+    ).fetchall()
+
+    fide = cursor.execute(
+        f"SELECT date, standard FROM fide WHERE name='{name}'"
+    ).fetchall()
+
+    conn.close()
+    
+
+    df_search = pd.DataFrame(player, columns=['Date', 'Search Volume'])
+    df_fide = pd.DataFrame(fide, columns=['Date', 'FIDE Rating'])
+    
+    df_search['Date'] = pd.to_datetime(df_search['Date'], format='%b %Y')
+    df_fide['Date'] = pd.to_datetime(df_fide['Date'], format='%b %Y')
+    
+    df = pd.merge(df_search, df_fide, on='Date', how='outer').sort_values(by='Date')
+    
+    return df['Date'], df['Search Volume'].fillna(0), df['FIDE Rating'].ffill()
+
+players = [
+    'Magnus Carlsen', 'Fabiano Caruana', 'Hikaru Nakamura', 'Arjun Erigaisi',
+    'Gukesh Dommaraju', 'Nodirbek Abdusattorov', 'Alireza Firouzja',
+    'Ian Nepomniachtchi', 'Yi Wei', 'Viswanathan Anand'
+]
+
+def create_line_graph_popularity(name, date, player_search, fide_standard, fide_rapid, fide_blitz):
+    player_search = (player_search - np.min(player_search)) / (np.max(player_search) - np.min(player_search))
+    fide_standard = (fide_standard - np.min(fide_standard)) / (np.max(fide_standard) - np.min(fide_standard))
+    fide_rapid = (fide_rapid - np.min(fide_rapid)) / (np.max(fide_rapid) - np.min(fide_rapid))
+    fide_blitz = (fide_blitz - np.min(fide_blitz)) / (np.max(fide_blitz) - np.min(fide_blitz))
+    
+    data = pd.DataFrame({
+        'Date': pd.to_datetime(date),
+        f"{name}'s search volume (normalized)": player_search,
+        f"{name}'s FIDE standard rating (normalized)": fide_standard,
+        f"{name}'s FIDE rapid rating (normalized)": fide_rapid,
+        f"{name}'s FIDE blitz rating (normalized)": fide_blitz
+    })
+
+    data_melted = data.melt(id_vars=['Date'], var_name='Metric', value_name='Value')
+
+    fig = px.line(
+        data_melted, x='Date', y='Value', color='Metric',
+        title=f"{name}'s Popularity vs. FIDE Ratings (Normalized)",
+        labels={'Value': 'Normalized Value', 'Date': 'Date'},
+        template="plotly_white"
+    )
+
+    fig.show()
+
+def player_info_returner(name):
+    conn = sqlite3.connect("../data/chess.db")
+    cursor = conn.cursor()
+
+    player = cursor.execute(
+        f"SELECT date, search_rate FROM players_gtrends WHERE name='{name}'"
+    ).fetchall()
+    
+    fide = cursor.execute(
+        f"SELECT date, standard, rapid, blitz FROM fide WHERE name='{name}'"
+    ).fetchall()
+
+    conn.close()
+    
+
+    df_search = pd.DataFrame(player, columns=['Date', 'Search Volume'])
+    df_fide = pd.DataFrame(fide, columns=['Date', 'FIDE Standard', 'FIDE Rapid', 'FIDE Blitz'])
+    
+    df_search['Date'] = pd.to_datetime(df_search['Date'], format='%b %Y')
+    df_fide['Date'] = pd.to_datetime(df_fide['Date'], format='%b %Y')
+    
+    df = pd.merge(df_search, df_fide, on='Date', how='outer').sort_values(by='Date')
+    
+    return df['Date'], df['Search Volume'].fillna(0), df['FIDE Standard'].ffill(), df['FIDE Rapid'].ffill(), df['FIDE Blitz'].ffill()
+
+def create_line_graph_fide_ratings(name, date, fide_standard, fide_rapid, fide_blitz):
+    data = pd.DataFrame({
+        'Date': pd.to_datetime(date),
+        f"{name}'s FIDE standard rating": fide_standard,
+        f"{name}'s FIDE rapid rating": fide_rapid,
+        f"{name}'s FIDE blitz rating": fide_blitz
+    })
+
+    data_melted = data.melt(id_vars=['Date'], var_name='Metric', value_name='Value')
+
+    fig = px.line(
+        data_melted, x='Date', y='Value', color='Metric',
+        title=f"{name}'s FIDE Ratings Over Time",
+        labels={'Value': 'Rating', 'Date': 'Date'},
+        template="plotly_white"
+    )
+    if name == "Alireza Firouzja":
+        fig.write_html("../docs/plots/Alireza_multi_rating_plot.html", full_html=False)
+    fig.show()
+
+def player_info_returner(name):
+    conn = sqlite3.connect("../data/chess.db")
+    cursor = conn.cursor()
+
+    fide = cursor.execute(
+        f"SELECT date, standard, rapid, blitz FROM fide WHERE name='{name}'"
+    ).fetchall()
+
+    conn.close()
+
+    df_fide = pd.DataFrame(fide, columns=['Date', 'FIDE Standard', 'FIDE Rapid', 'FIDE Blitz'])
+    df_fide['Date'] = pd.to_datetime(df_fide['Date'], format='%b %Y')
+    df_fide = df_fide.sort_values(by='Date')
+    
+    return df_fide['Date'], df_fide['FIDE Standard'].ffill(), df_fide['FIDE Rapid'].ffill(), df_fide['FIDE Blitz'].ffill()
