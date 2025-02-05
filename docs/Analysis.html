@@ -51,27 +51,60 @@
   <h1>IN-CHESS-TIGATION</h1>
   <p class="lead">A deep dive into the world's top chess players</p>
 </div>
-<div class="col-md-8">
-  <h2 class="text-primary">Analysis</h2>
-</div>
-<div class="container my-5 p-5 bg-light shadow rounded">
+
+<div class="container my-5 p-3 bg-light shadow rounded">
   <div class="row align-items-center">
-    <div class="col-md-4 text-center ratio ratio-4x3">
-      <iframe src="./plots/magnus_gtrends_plot.html"></iframe>
+    <h2 class="text-dark" style="text-align: center;font-family: 'Courier New',">Our Analysis</h2>
+  </div>
+  <div class="container my-5 p-5 bg-light shadow rounded">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center ratio ratio-4x3">
+        <iframe src="./plots/magnus_gtrends_plot.html"></iframe>
+      </div>
     </div>
   </div>
-</div>
-<div class="container my-5 p-5 bg-light shadow rounded">
-  <div class="row align-items-center">
-    <div class="col-md-4 text-center ratio ratio-4x3">
-      <iframe src="./plots/Yi_Wei_Pop_to_Fide_plot.html"></iframe>
+  <div class="container my-5 p-5 bg-light shadow rounded">
+    <div class="row justify-content-center">
+      <div class="col-md-8 text-center ratio ratio-4x3">
+        <iframe src="./plots/Alireza_multi_rating_plot.html"></iframe>
+      </div>
+    </div>
+    <div class="row mt-4">
+      <div class="col-md-10 mx-auto">
+        <h4 class="mb-3">Competitive Success vs. Public Attention in Chess</h4>
+        <p>
+          Looking at Yi Wei's graph along with those of other top ten players reveals an interesting disconnect between 
+          competitive success and public attention in chess. While these players demonstrate remarkable consistency in 
+          their FIDE ratings - often maintaining extremely high levels of performance for years - their search popularity 
+          tends to follow much more erratic patterns that don't necessarily align with their competitive achievements.
+        </p>
+        <p>
+          The normalized FIDE ratings for elite players like Yi Wei typically show steady upward trajectories followed by 
+          sustained high performance, reflecting their mastery of the game. However, the search volume patterns across all 
+          these top players demonstrate that public interest operates independently of playing strength. The sporadic spikes 
+          in search volume, like those seen for Yi Wei in late 2024 and early 2025, appear to be common across the cohort of 
+          elite players, suggesting that chess success alone doesn't drive public attention.
+        </p>
+        <p>
+          This pattern raises interesting questions about what actually captures public interest in chess. Despite these 
+          players being among the world's best, their moments of peak public attention don't necessarily coincide with their 
+          greatest competitive achievements. Instead, search interest seems to be driven by other factors - perhaps specific 
+          matches, tournaments, or events that temporarily capture public imagination, even if they aren't necessarily the 
+          most significant moments in terms of pure chess accomplishment.
+        </p>
+        <p>
+          The fact that this pattern repeats across the top ten players suggests a broader truth about chess as a sport: 
+          technical excellence and public engagement operate on different wavelengths, with success at the board not 
+          automatically translating into broader public recognition or interest.
+        </p>
+      </div>
     </div>
   </div>
-</div>
-<div class="container my-5 p-5 bg-light shadow rounded">
-  <div class="row align-items-center">
-    <div class="col-md-4 text-center ratio ratio-4x3">
-      <iframe src="./plots/Alireza_multi_rating_plot.html"></iframe>
+  <div class="container my-5 p-5 bg-light shadow rounded">
+    <div class="row align-items-center">
+      <div class="col-md-4 text-center ratio ratio-4x3">
+        <iframe src="./plots/Alireza_multi_rating_plot.html"></iframe>
+      </div>
     </div>
   </div>
 </div>
