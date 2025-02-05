@@ -53,6 +53,8 @@ This project analyzes the performance trends of the top ten chess players using 
 ---
 
 ## Research Questions
+Our main goal with this research was to see how chess players' performances changed in different conditions (i.e., game mode, time, in-person vs. online), and how their performance (good or bad) influenced national social trends. To investigate this, we came up with three main research questions to lead our exploratory analysis and act as a starting point:
+
 - **Question 1:** How do the top ten chess players vary in performance across different game modes?
 
 - **Question 2:** Does player performance online align with their FIDE rating?
