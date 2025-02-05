@@ -15,9 +15,9 @@ This project analyzes the performance trends of the top ten chess players using 
 ---
 
 ## **Research Questions**
-- **How do the top ten chess players vary in performance across different game modes?**  
-- **Does player performance online align with their FIDE rating progression over time?**  
-- **How does their success correlate with chess interest in their home country? Are certain players more influential than others?**
+- **Question 1:** How do the top ten chess players vary in performance across different game modes?
+- **Question 2:** Does player performance online align with their FIDE rating?
+- **Question 3:** How does their success correlate with chess interest in their home country? Are certain players more influential than others?
 
 ---
 
@@ -66,19 +66,16 @@ This project analyzes the performance trends of the top ten chess players using 
 ---
 
 ## **Work Distribution Strategy**
-- **Phase 1: Data Collection** – Divide API setup and data retrieval tasks.  
+- **Phase 1: Data Collection** – Divide API setup and data retrieval tasks.
+   - Pritish: Google Trends and FIDE
+   - Defne: Chess.com and FIDE
+   - Coleman: Google Trends and FIDE
 - **Phase 2: Data Analysis** – Assign statistical tests and trend correlation tasks based on expertise.  
 - **Phase 3: Data Visualization** – Share responsibility for creating visualizations and graphs.
 
 
 ## **Intended Progression** 
 ![Flowchart](data/image/Flowchart.png)
-
-
-
-DRAFT (things to include):
-
----
 
 <u> Background Information/Key Terms: </u>
 **Chess:** is this worth defining?
@@ -93,18 +90,13 @@ DRAFT (things to include):
 
 ---
 
-<u> Research Question: </u>
-RQ1: Does the FIDE rating progression of the curren top 10 chess players change, depending on the game mode?
-RQ2: 
-
----
-
 Methodology:
 1) Define a dataframe of the current, active, global top 10 chess players
-2) Configure and use the FIDE Ratings Scraper to collect the classic, rapid, and blitz over-the-board data of the 10 players, convert it into a pandas dataframe
-3) 
-4) 
-5) 
+2) Configure and use the FIDE Ratings Scraper to collect the classic, rapid, and blitz over-the-board data of the 10 players, convert it into a pandas dataframe and save as a CSV
+3) Obtain current Chess.com ratings of the players through the public Chess.com API, convert it into a pandas dataframe and save as a CSV
+4) Obtain Google Trends data for the search words "chess" and "[player name]" in players' federation countries (e.g., Magnus Carlsen plays for the Norwegian Chess federation, so his trend data will be collectd from Norway) using SerpAPI
+5) Process and combine the data into an SQL database
+6) Perform exploratory analysis and visualize the results through appropriate plots
 
 ---
 
